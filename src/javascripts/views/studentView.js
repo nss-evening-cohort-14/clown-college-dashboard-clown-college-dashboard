@@ -2,7 +2,7 @@ import showAllStudents from '../components/students/showAllStudents';
 
 const starterHTML = `
 <h2>All Clown Students</h2>
-<div id="students--all"></div>
+<div id="students--view"></div>
 `;
 
 const studentView = () => {
