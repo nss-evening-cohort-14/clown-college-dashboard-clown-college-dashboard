@@ -10,11 +10,11 @@ const getAllClasses = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getSingleClass = () => new Promise((resolve, reject) => {
+const createClass = (classInfo) => new Promise((resolve, reject) => {
   axios
-    .get(`${BASEURL}/classes.json`)
-    .then((resp) => resolve(Object.values(resp.data)))
+    .post(`${BASEURL}/classes.json`, classInfo)
+    .then(resolve)
     .catch(reject);
 });
 
-export { getAllClasses, getSingleClass };
+export { getAllClasses, createClass };

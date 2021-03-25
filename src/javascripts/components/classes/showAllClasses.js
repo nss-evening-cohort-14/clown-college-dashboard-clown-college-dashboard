@@ -28,7 +28,7 @@ const showAllClasses = () => {
     </div>
     `;
 
-    document.querySelector('#classes--view').innerHTML = domString;
+    document.querySelector('#classes--list').innerHTML = domString;
   });
 };
 
