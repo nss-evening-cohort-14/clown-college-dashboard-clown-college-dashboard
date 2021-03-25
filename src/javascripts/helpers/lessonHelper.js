@@ -10,11 +10,14 @@ const getAllLessons = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getSingleLesson = () => new Promise((resolve, reject) => {
+const createLesson = (lessonInfo) => new Promise((resolve, reject) => {
   axios
-    .get(`${BASEURL}/lessons.json`)
-    .then((resp) => resolve(Object.values(resp.data)))
+    .post(`${BASEURL}/lessons.json`, lessonInfo)
+    .then((resp) => {
+      const firebaseKey = resp.data.name;
+      axios.patch(`${BASEURL}/lessons/${firebaseKey}.json`, { firebaseKey }).then(resolve);
+    })
     .catch(reject);
 });
 
-export { getAllLessons, getSingleLesson };
+export { getAllLessons, createLesson };

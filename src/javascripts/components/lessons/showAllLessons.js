@@ -28,7 +28,7 @@ const showAllLessons = () => {
     </div>
     `;
 
-    document.querySelector('#lessons--view').innerHTML = domString;
+    document.querySelector('#lessons--list').innerHTML = domString;
   });
 };
 
