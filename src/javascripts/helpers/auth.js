@@ -10,4 +10,6 @@ const checkLoginStatus = () => {
   });
 };
 
-export default checkLoginStatus;
+const getCurrentUser = () => firebase.auth().currentUser;
+
+export { getCurrentUser, checkLoginStatus };

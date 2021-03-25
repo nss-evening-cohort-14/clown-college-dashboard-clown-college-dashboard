@@ -4,8 +4,8 @@ import studentView from './studentView';
 
 const startApp = (userInfo) => {
   domBuilder(userInfo);
-  addDomEvents();
-  studentView();
+  addDomEvents(userInfo);
+  studentView(userInfo);
 };
 
 export default startApp;

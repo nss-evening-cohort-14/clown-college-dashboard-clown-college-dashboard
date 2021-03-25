@@ -4,6 +4,7 @@ const starterHTML = `
 <div id="app-container">
   <div id="navbar-container"></div>
   <div id="app-body"></div>
+  <div id="form-container"></div>
 </div>
 `;
 

@@ -6,7 +6,7 @@ import lessonView from '../views/lessonView';
 import classView from '../views/classView';
 import majorView from '../views/majorView';
 
-const navEvents = (eventId) => {
+const navEvents = (eventId, userInfo) => {
   const action = eventId.split('--')[1];
   switch (action) {
     case 'logout':
@@ -16,22 +16,22 @@ const navEvents = (eventId) => {
       signIn();
       break;
     case 'home':
-      studentView();
+      studentView(userInfo);
       break;
     case 'students':
-      studentView();
+      studentView(userInfo);
       break;
     case 'teachers':
-      teacherView();
+      teacherView(userInfo);
       break;
     case 'lessons':
-      lessonView();
+      lessonView(userInfo);
       break;
     case 'classes':
-      classView();
+      classView(userInfo);
       break;
     case 'majors':
-      majorView();
+      majorView(userInfo);
       break;
     default:
       console.error(`The event ${action} is not accounted for`);

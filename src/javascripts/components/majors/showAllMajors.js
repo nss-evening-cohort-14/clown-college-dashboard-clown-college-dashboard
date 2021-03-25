@@ -28,7 +28,7 @@ const showAllMajors = () => {
     </div>
     `;
 
-    document.querySelector('#majors--view').innerHTML = domString;
+    document.querySelector('#majors--list').innerHTML = domString;
   });
 };
 
