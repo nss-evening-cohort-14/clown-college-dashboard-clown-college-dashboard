@@ -1,12 +1,16 @@
+import setUpView from '../components/setUpView';
 import showAllStudents from '../components/students/showAllStudents';
 
-const starterHTML = `
+const starterHTML = (userInfo) => `
 <h2>All Clown Students</h2>
-<div id="students--view"></div>
+<div id="students--view">
+  ${userInfo ? '<div> <button class="btn btn-success" id="students--add" data-toggle="modal" data-target="#formModal">Add Student</button></div>' : ''}
+  <div id="students--list"></div>
+</div>
 `;
 
-const studentView = () => {
-  document.querySelector('#app-body').innerHTML = starterHTML;
+const studentView = (userInfo) => {
+  setUpView(starterHTML(userInfo));
   showAllStudents();
 };
 

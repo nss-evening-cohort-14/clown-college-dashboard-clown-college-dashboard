@@ -32,7 +32,7 @@ const showAllStudents = () => {
     </div>
     `;
 
-    document.querySelector('#students--view').innerHTML = domString;
+    document.querySelector('#students--list').innerHTML = domString;
   });
 };
 
