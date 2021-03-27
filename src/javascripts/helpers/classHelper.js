@@ -17,6 +17,13 @@ const getSingleClass = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const deleteClass = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .delete(`${BASEURL}/classes/${firebaseKey}.json`)
+    .then(resolve)
+    .catch(reject);
+});
+
 const updateClass = (firebaseKey, classInfo) => new Promise((resolve, reject) => {
   axios
     .patch(`${BASEURL}/classes/${firebaseKey}.json`, classInfo)
@@ -27,5 +34,6 @@ const updateClass = (firebaseKey, classInfo) => new Promise((resolve, reject) =>
 export {
   getAllClasses,
   getSingleClass,
-  updateClass
+  updateClass,
+  deleteClass
 };

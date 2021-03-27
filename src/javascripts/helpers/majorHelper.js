@@ -17,6 +17,13 @@ const getSingleMajor = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const deleteMajor = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .delete(`${BASEURL}/majors/${firebaseKey}.json`)
+    .then(resolve)
+    .catch(reject);
+});
+
 const createMajor = (majorInfo) => new Promise((resolve, reject) => {
   axios
     .post(`${BASEURL}/majors.json`, majorInfo)
@@ -38,5 +45,6 @@ export {
   getAllMajors,
   createMajor,
   getSingleMajor,
-  updateMajor
+  updateMajor,
+  deleteMajor
 };

@@ -20,4 +20,11 @@ const createStudent = (studentInfo) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getAllStudents, createStudent };
+const deleteStudent = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .gedeletet(`${BASEURL}/students/${firebaseKey}.json`)
+    .then(resolve)
+    .catch(reject);
+});
+
+export { getAllStudents, createStudent, deleteStudent };

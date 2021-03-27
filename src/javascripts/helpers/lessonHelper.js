@@ -17,6 +17,13 @@ const getSingleLesson = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const deleteLesson = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .delete(`${BASEURL}/lessons/${firebaseKey}.json`)
+    .then(resolve)
+    .catch(reject);
+});
+
 const createLesson = (lessonInfo) => new Promise((resolve, reject) => {
   axios
     .post(`${BASEURL}/lessons.json`, lessonInfo)
@@ -38,5 +45,6 @@ export {
   getAllLessons,
   createLesson,
   getSingleLesson,
-  updateLesson
+  updateLesson,
+  deleteLesson
 };
