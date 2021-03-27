@@ -6,7 +6,7 @@ const BASEURL = firebaseConfig.databaseURL;
 const getAllClasses = () => new Promise((resolve, reject) => {
   axios
     .get(`${BASEURL}/classes.json`)
-    .then((resp) => resolve(Object.values(resp.data)))
+    .then((resp) => resolve(Object.values(resp.data).reverse()))
     .catch(reject);
 });
 
