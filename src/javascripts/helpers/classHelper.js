@@ -10,11 +10,22 @@ const getAllClasses = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const createClass = (classInfo) => new Promise((resolve, reject) => {
+const getSingleClass = (firebaseKey) => new Promise((resolve, reject) => {
   axios
-    .post(`${BASEURL}/classes.json`, classInfo)
+    .get(`${BASEURL}/classes/${firebaseKey}.json`)
+    .then((resp) => resolve(resp.data))
+    .catch(reject);
+});
+
+const updateClass = (firebaseKey, classInfo) => new Promise((resolve, reject) => {
+  axios
+    .patch(`${BASEURL}/classes/${firebaseKey}.json`, classInfo)
     .then(resolve)
     .catch(reject);
 });
 
-export { getAllClasses, createClass };
+export {
+  getAllClasses,
+  getSingleClass,
+  updateClass
+};

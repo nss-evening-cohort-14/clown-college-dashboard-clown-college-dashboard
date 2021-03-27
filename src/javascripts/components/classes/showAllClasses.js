@@ -1,12 +1,13 @@
 import { getAllClasses } from '../../helpers/classHelper';
 
-const classCard = (classInfo) => `
+const classCard = (classInfo, userInfo) => `
 <tr>
   <td>${classInfo.name}</td>
+  ${userInfo ? `<td><button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="classes--edit--${classInfo.firebaseKey}">Edit</button></td>` : ''}
 </tr>
 `;
 
-const showAllClasses = () => {
+const showAllClasses = (userInfo) => {
   getAllClasses().then((resp) => {
     let domString = `
     <div class="table-responsive">
@@ -14,12 +15,13 @@ const showAllClasses = () => {
         <thead>
           <tr>
             <th scope="col">Class Name</th>
+            ${userInfo ? '<th scope="col">Actions</th>' : ''}
           </tr>
         </thead>
         <tbody>
     `;
     resp.forEach((classInfo) => {
-      domString += classCard(classInfo);
+      domString += classCard(classInfo, userInfo);
     });
 
     domString += `

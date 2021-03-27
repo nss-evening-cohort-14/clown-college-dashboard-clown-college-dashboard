@@ -11,7 +11,7 @@ ${userInfo ? '<div> <button class="btn btn-success" id="classes--add" data-toggl
 
 const classView = (userInfo) => {
   setUpView(starterHTML(userInfo));
-  showAllClasses();
+  showAllClasses(userInfo);
 };
 
 export default classView;
