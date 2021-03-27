@@ -1,6 +1,6 @@
 import showAddStudentForm from '../components/students/showAddStudentForm';
 import showAllStudents from '../components/students/showAllStudents';
-import { createStudent, deleteStudent } from '../helpers/studentHelper';
+import { createStudent, deleteStudent, getSingleStudent } from '../helpers/studentHelper';
 
 const handleCreateStudent = () => {
   const newStudentInfo = {
@@ -12,7 +12,11 @@ const handleCreateStudent = () => {
 };
 
 const handleDeleteStudent = (firebaseKey) => {
-  deleteStudent(firebaseKey).then(showAllStudents);
+  getSingleStudent(firebaseKey).then((studentInfo) => {
+    // eslint-disable-next-line no-alert
+    const isConfirmed = window.confirm(`Do you want to delete the student "${studentInfo.fullName}"?`);
+    if (isConfirmed) deleteStudent(firebaseKey).then(showAllStudents);
+  });
 };
 
 const studentEvents = (eventId) => {

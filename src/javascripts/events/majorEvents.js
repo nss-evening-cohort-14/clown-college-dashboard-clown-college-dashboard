@@ -1,6 +1,11 @@
 import showAddMajorForm from '../components/majors/showAddMajorForm';
 import showAllMajors from '../components/majors/showAllMajors';
-import { createMajor, deleteMajor, updateMajor } from '../helpers/majorHelper';
+import {
+  createMajor,
+  deleteMajor,
+  getSingleMajor,
+  updateMajor
+} from '../helpers/majorHelper';
 import showEditMajorForm from '../components/majors/showEditMajorForm';
 
 const handleCreateMajor = () => {
@@ -20,7 +25,11 @@ const handleUpdateMajor = (firebaseKey) => {
 };
 
 const handleDeleteMajor = (firebaseKey) => {
-  deleteMajor(firebaseKey).then(showAllMajors);
+  getSingleMajor(firebaseKey).then((majorInfo) => {
+    // eslint-disable-next-line no-alert
+    const isConfirmed = window.confirm(`Do you want to delete the "${majorInfo.name}" Major?`);
+    if (isConfirmed) deleteMajor(firebaseKey).then(showAllMajors);
+  });
 };
 
 const majorEvents = (eventId) => {

@@ -1,7 +1,12 @@
 import showAddLessonForm from '../components/lessons/showAddLessonForm';
 import showAllLessons from '../components/lessons/showAllLessons';
 import showEditLessonForm from '../components/lessons/showEditLessonForm';
-import { createLesson, deleteLesson, updateLesson } from '../helpers/lessonHelper';
+import {
+  createLesson,
+  deleteLesson,
+  getSingleLesson,
+  updateLesson
+} from '../helpers/lessonHelper';
 
 const handleCreateLesson = () => {
   const lessonInfo = {
@@ -20,7 +25,11 @@ const handleUpdateLesson = (firebaseKey) => {
 };
 
 const handleDeleteLesson = (firebaseKey) => {
-  deleteLesson(firebaseKey).then(showAllLessons);
+  getSingleLesson(firebaseKey).then((lessonInfo) => {
+    // eslint-disable-next-line no-alert
+    const isConfirmed = window.confirm(`Do you want to delete the "${lessonInfo.name}" class?`);
+    if (isConfirmed) deleteLesson(firebaseKey).then(showAllLessons);
+  });
 };
 
 const lessonEvents = (eventId) => {

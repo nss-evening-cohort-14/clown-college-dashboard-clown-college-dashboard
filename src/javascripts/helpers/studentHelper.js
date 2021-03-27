@@ -10,6 +10,13 @@ const getAllStudents = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getSingleStudent = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .get(`${BASEURL}/students/${firebaseKey}.json`)
+    .then((resp) => resolve(resp.data))
+    .catch(reject);
+});
+
 const createStudent = (studentInfo) => new Promise((resolve, reject) => {
   axios
     .post(`${BASEURL}/students.json`, studentInfo)
@@ -27,4 +34,9 @@ const deleteStudent = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getAllStudents, createStudent, deleteStudent };
+export {
+  getAllStudents,
+  createStudent,
+  deleteStudent,
+  getSingleStudent
+};
