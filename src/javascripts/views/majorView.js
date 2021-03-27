@@ -1,10 +1,10 @@
 import showAllMajors from '../components/majors/showAllMajors';
 import setUpView from '../components/setUpView';
 
-const starterHTML = (userInfo) => `
+const starterHTML = () => `
 <h2>All Clown Lessons</h2>
 <div id="majors--view">
-${userInfo ? '<div> <button class="btn btn-success" id="majors--add" data-toggle="modal" data-target="#formModal">Add Major</button></div>' : ''}
+<div> <button class="btn btn-success" id="majors--add" data-toggle="modal" data-target="#formModal">Add Major</button></div>
   <div id="majors--list"></div>
 </div>
 `;

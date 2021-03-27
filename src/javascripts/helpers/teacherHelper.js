@@ -10,6 +10,13 @@ const getAllTeachers = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getSingleTeachers = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .get(`${BASEURL}/teachers/${firebaseKey}.json`)
+    .then((resp) => resolve(resp.data))
+    .catch(reject);
+});
+
 const createTeacher = (teacherInfo) => new Promise((resolve, reject) => {
   axios
     .post(`${BASEURL}/teachers.json`, teacherInfo)
@@ -20,4 +27,16 @@ const createTeacher = (teacherInfo) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getAllTeachers, createTeacher };
+const updateTeacher = (firebaseKey, teacherInfo) => new Promise((resolve, reject) => {
+  axios
+    .patch(`${BASEURL}/teachers/${firebaseKey}.json`, teacherInfo)
+    .then(resolve)
+    .catch(reject);
+});
+
+export {
+  getAllTeachers,
+  createTeacher,
+  getSingleTeachers,
+  updateTeacher
+};

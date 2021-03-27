@@ -11,7 +11,7 @@ ${userInfo ? '<div> <button class="btn btn-success" id="teachers--add" data-togg
 
 const teacherView = (userInfo) => {
   setUpView(starterHTML(userInfo));
-  showAllTeachers();
+  showAllTeachers(userInfo);
 };
 
 export default teacherView;
