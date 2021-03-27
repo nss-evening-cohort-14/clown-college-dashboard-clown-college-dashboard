@@ -10,7 +10,7 @@ const getAllTeachers = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getSingleTeachers = (firebaseKey) => new Promise((resolve, reject) => {
+const getSingleTeacher = (firebaseKey) => new Promise((resolve, reject) => {
   axios
     .get(`${BASEURL}/teachers/${firebaseKey}.json`)
     .then((resp) => resolve(resp.data))
@@ -37,6 +37,6 @@ const updateTeacher = (firebaseKey, teacherInfo) => new Promise((resolve, reject
 export {
   getAllTeachers,
   createTeacher,
-  getSingleTeachers,
+  getSingleTeacher,
   updateTeacher
 };

@@ -10,6 +10,13 @@ const getAllLessons = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getSingleLesson = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .get(`${BASEURL}/lessons/${firebaseKey}.json`)
+    .then((resp) => resolve(resp.data))
+    .catch(reject);
+});
+
 const createLesson = (lessonInfo) => new Promise((resolve, reject) => {
   axios
     .post(`${BASEURL}/lessons.json`, lessonInfo)
@@ -20,4 +27,16 @@ const createLesson = (lessonInfo) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getAllLessons, createLesson };
+const updateLesson = (firebaseKey, lessonInfo) => new Promise((resolve, reject) => {
+  axios
+    .patch(`${BASEURL}/lessons/${firebaseKey}.json`, lessonInfo)
+    .then(resolve)
+    .catch(reject);
+});
+
+export {
+  getAllLessons,
+  createLesson,
+  getSingleLesson,
+  updateLesson
+};
