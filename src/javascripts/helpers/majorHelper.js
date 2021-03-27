@@ -10,6 +10,13 @@ const getAllMajors = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getSingleMajor = (firebaseKey) => new Promise((resolve, reject) => {
+  axios
+    .get(`${BASEURL}/majors/${firebaseKey}.json`)
+    .then((resp) => resolve(resp.data))
+    .catch(reject);
+});
+
 const createMajor = (majorInfo) => new Promise((resolve, reject) => {
   axios
     .post(`${BASEURL}/majors.json`, majorInfo)
@@ -20,4 +27,16 @@ const createMajor = (majorInfo) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export { getAllMajors, createMajor };
+const updateMajor = (firebaseKey, majorInfo) => new Promise((resolve, reject) => {
+  axios
+    .patch(`${BASEURL}/majors/${firebaseKey}.json`, majorInfo)
+    .then(resolve)
+    .catch(reject);
+});
+
+export {
+  getAllMajors,
+  createMajor,
+  getSingleMajor,
+  updateMajor
+};
