@@ -1,61 +1,91 @@
-# Clown College Dashboard
+# Clown College [![Netlify Status](https://api.netlify.com/api/v1/badges/0c863477-0555-44fa-a891-ff5fc842a709/deploy-status)](https://app.netlify.com/sites/cranky-curran-ea8e6c/deploys)
 
-### Product Owner
-Your PO is assigned as an approver and feedback for your application. They are not there to guide you through code. If you have code related needs, submit a completed issue ticket.
+The art of comedy is not lost, especially not here at <funny name>. Due to declining enrollment numbers, the Dean wants an admin dashboard to keep track of the students, the teachers, the classes, and the lessons.
 
-PO: **Aja**
+[View App](https://cranky-curran-ea8e6c.netlify.app/)
 
-## Description
-The art of comedy is not lost, especially not here at <funny name>.  Due to declining enrollment numbers, the Dean wants an admin dashboard to keep track of the students, the teachers, the classes, and the lessons.
+## Get Started
 
-### Requirements:
-* Complete Planning
-    * Make sure to break down tickets into milestones, include an ERD and a Workflow Diagram of how you will tackle each part of the application
-    * NOTE: This includes setting up a development branch that branches off of the main branch to test your team's code and for review by the PO
-* Set up deployment EARLY and deploy with every milestone so that the PO can see the web interface
-* Add Webpack to the Project
-* Authenticate to perform any actions (CUD)
-* Students
-* Teachers
-* Lessons
-* Classes
-* Consistent Theme
-**Stretch goal:** Curriculumn (Majors)
+```terminal
+$ git clone git@github.com:nss-evening-cohort-14/clown-college-dashboard-clown-college-dashboard.git
+$ cd clown-college-dashboard-clown-college-dashboard
+$ npm i
+$ npm start
+```
 
-## User Stories
-#### Authentication
-* As a user, when I am unauthenticated I should be able to see the dashboard (Read only).
-* As a user, when I am authenticated I should be able to perform all actions on the dashboard (full CRUD).
-* As a user, I should be able to login via google.
-* As a user, I should be able to logout
+## Features
+
+- Google Authentication
+  - If unauthenticated the application is Read Only
+  - If authenticated the application, the user can do full CRUD
 
 #### Students
-* As a user, I should be able to view all Students.
-* As a user, I should be able to add a Student.
-* As a user, I should be able to edit a Student.
-* As a user, I should be able to remove a Student.
+
+- View all Students
+- Add a Student
+- Edit a Student
+- Remove a Student
 
 #### Teachers
-* As a user, I should be able to view all active Teachers.
-* As a user, I should be able to create a Teacher.
-* As a user, I should be able to edit a Teacher.
-* As a user, I should be able to delete a Teacher.
+
+- View all active Teachers
+- Create a Teacher
+- Edit a Teacher
+- Delete a Teacher
 
 #### Lessons
-* As a user, I should be able to view all the Lessons.
-* As a user, I should be able to add a Lesson.
-* As a user, I should be able to edit a Lesson.
-* As a user, I should be able to delete a Lesson.
+
+- View all the Lessons
+- Add a Lesson
+- Edit a Lesson
+- Delete a Lesson
 
 #### Classes
-* As a user, I should be able to view all the Classes.
-* As a user, I should be able to add a Class.
-* As a user, I should be able to edit a Class.
-* As a user, I should be able to delete a Class.
 
-### Stretch Goals
+- View all the Classes
+- Add a Class
+- Edit a Class
+- Delete a Class
+
 #### Majors
-* As a user, I should be able to view all the Majors.
-* As a user, I should be able to add a Major.
-* As a user, I should be able to edit a Major.
-* As a user, I should be able to delete a Major.
+
+- View all the Majors
+- Add a Major
+- Edit a Major
+- Delete a Major
+
+## Relevant Links
+
+- [Check out the deployed site](https://cranky-curran-ea8e6c.netlify.app/)
+
+<!-- - [Wireframes](#your-link) -->
+
+- [Project Board](https://github.com/nss-evening-cohort-14/clown-college-dashboard-clown-college-dashboard/projects/1)
+
+<iframe width="560" height="315" src='https://dbdiagram.io/embed/605a8522ecb54e10c33cef28'> </iframe>
+
+## Project Screenshots
+
+<img
+  src="documentation/delete-prompt.png"
+  width="500px"
+/>
+
+<img
+  src="documentation/edit-menu.png"
+  width="500px"
+/>
+
+<img
+  src="documentation/no-picture-screen.png"
+  width="500px"
+/>
+
+<img
+  src="documentation/picture-screen.png"
+  width="500px"
+/>
+
+## Contributors
+
+- [Trinity Christiana](https://github.com/TrinityChristiana)
