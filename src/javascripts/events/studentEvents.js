@@ -1,8 +1,8 @@
 import showAddStudentForm from '../components/students/showAddStudentForm';
 import showAllStudents from '../components/students/showAllStudents';
-import { createStudent } from '../helpers/studentHelper';
+import { createStudent, deleteStudent } from '../helpers/studentHelper';
 
-const addStudent = () => {
+const handleCreateStudent = () => {
   const newStudentInfo = {
     fullName: document.querySelector('#fullName').value,
     imageUrl: document.querySelector('#imageUrl').value,
@@ -11,6 +11,10 @@ const addStudent = () => {
   $('#formModal').modal('toggle');
 };
 
+// const handleDeleteStudent = (firebaseKey) => {
+//   deleteStudent(firebaseKey).then(showAllStudents);
+// };
+
 const studentEvents = (eventId) => {
   const action = eventId.split('--')[1];
   switch (action) {
@@ -18,7 +22,7 @@ const studentEvents = (eventId) => {
       showAddStudentForm();
       break;
     case 'add-submit':
-      addStudent();
+      handleCreateStudent();
       break;
     default:
       console.error(`The event ${action} is not accounted for`);

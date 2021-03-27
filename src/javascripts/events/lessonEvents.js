@@ -1,9 +1,9 @@
 import showAddLessonForm from '../components/lessons/showAddLessonForm';
 import showAllLessons from '../components/lessons/showAllLessons';
 import showEditLessonForm from '../components/lessons/showEditLessonForm';
-import { createLesson, updateLesson } from '../helpers/lessonHelper';
+import { createLesson, deleteLesson, updateLesson } from '../helpers/lessonHelper';
 
-const addLesson = () => {
+const handleCreateLesson = () => {
   const lessonInfo = {
     name: document.querySelector('#name').value,
   };
@@ -11,13 +11,17 @@ const addLesson = () => {
   $('#formModal').modal('toggle');
 };
 
-const editLesson = (firebaseKey) => {
+const handleUpdateLesson = (firebaseKey) => {
   const lessonInfo = {
     name: document.querySelector('#name').value,
   };
   updateLesson(firebaseKey, lessonInfo).then(showAllLessons);
   $('#formModal').modal('toggle');
 };
+
+// const handleDeleteLesson = (firebaseKey) => {
+//   deleteLesson(firebaseKey).then(showAllLessons);
+// };
 
 const lessonEvents = (eventId) => {
   const [, action, firebaseKey] = eventId.split('--');
@@ -26,13 +30,13 @@ const lessonEvents = (eventId) => {
       showAddLessonForm();
       break;
     case 'add-submit':
-      addLesson();
+      handleCreateLesson();
       break;
     case 'edit':
       showEditLessonForm(firebaseKey);
       break;
     case 'edit-submit':
-      editLesson(firebaseKey);
+      handleUpdateLesson(firebaseKey);
       break;
     default:
       console.error(`The event ${action} is not accounted for`);

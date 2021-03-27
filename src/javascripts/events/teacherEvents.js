@@ -3,7 +3,7 @@ import showAllTeachers from '../components/teachers/showAllTeachers';
 import showEditTeacherForm from '../components/teachers/showEditTeacherForm';
 import { createTeacher, updateTeacher } from '../helpers/teacherHelper';
 
-const addTeacher = () => {
+const handleCreateTeacher = () => {
   const newTeacherInfo = {
     fullName: document.querySelector('#fullName').value,
     imageUrl: document.querySelector('#imageUrl').value,
@@ -12,7 +12,7 @@ const addTeacher = () => {
   $('#formModal').modal('toggle');
 };
 
-const editTeacher = (firebaseKey) => {
+const handleUpdateTeacher = (firebaseKey) => {
   const newTeacherInfo = {
     fullName: document.querySelector('#fullName').value,
     imageUrl: document.querySelector('#imageUrl').value,
@@ -28,13 +28,13 @@ const teacherEvents = (eventId) => {
       showAddTeacherForm();
       break;
     case 'add-submit':
-      addTeacher();
+      handleCreateTeacher();
       break;
     case 'edit':
       showEditTeacherForm(firebaseKey);
       break;
     case 'edit-submit':
-      editTeacher(firebaseKey);
+      handleUpdateTeacher(firebaseKey);
       break;
     default:
       console.error(`The event ${action} is not accounted for`);

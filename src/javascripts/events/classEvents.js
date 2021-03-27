@@ -1,15 +1,19 @@
 import showAddClassesForm from '../components/classes/showAddClassesForm';
 import showAllClasses from '../components/classes/showAllClasses';
 import showEditClassForm from '../components/classes/showEditClassForm';
-import { updateClass } from '../helpers/classHelper';
+import { deleteClass, updateClass } from '../helpers/classHelper';
 
-const editClass = (firebaseKey) => {
+const handleUpdateClass = (firebaseKey) => {
   const classInfo = {
     name: document.querySelector('#name').value,
   };
   updateClass(firebaseKey, classInfo).then(showAllClasses);
   $('#formModal').modal('toggle');
 };
+
+// const handleDeleteClass = (firebaseKey) => {
+//   deleteClass(firebaseKey).then(showAllClasses);
+// };
 
 const classEvents = (eventId) => {
   const [, action, firebaseKey] = eventId.split('--');
@@ -21,7 +25,7 @@ const classEvents = (eventId) => {
       showEditClassForm(firebaseKey);
       break;
     case 'edit-submit':
-      editClass(firebaseKey);
+      handleUpdateClass(firebaseKey);
       break;
     default:
       console.error(`The event ${action} is not accounted for`);
