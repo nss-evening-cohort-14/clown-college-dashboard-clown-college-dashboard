@@ -3,7 +3,10 @@ import { getAllMajors } from '../../helpers/majorHelper';
 const majorsCard = (majorsInfo) => `
 <tr>
   <td>${majorsInfo.name}</td>
-  <td><button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="majors--edit--${majorsInfo.firebaseKey}">Edit</button></td>
+  <td>
+    <button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="majors--edit--${majorsInfo.firebaseKey}">Edit</button>
+    <button class="btn btn-danger" id="majors--delete--${majorsInfo.firebaseKey}">Delete</button>
+  </td>
 </tr>
 `;
 

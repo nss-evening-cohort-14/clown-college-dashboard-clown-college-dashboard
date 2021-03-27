@@ -11,7 +11,7 @@ const starterHTML = (userInfo) => `
 
 const studentView = (userInfo) => {
   setUpView(starterHTML(userInfo));
-  showAllStudents();
+  showAllStudents(userInfo);
 };
 
 export default studentView;

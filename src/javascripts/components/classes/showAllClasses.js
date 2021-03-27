@@ -3,7 +3,11 @@ import { getAllClasses } from '../../helpers/classHelper';
 const classCard = (classInfo, userInfo) => `
 <tr>
   <td>${classInfo.name}</td>
-  ${userInfo ? `<td><button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="classes--edit--${classInfo.firebaseKey}">Edit</button></td>` : ''}
+  ${userInfo ? `
+  <td>
+    <button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="classes--edit--${classInfo.firebaseKey}">Edit</button>
+    <button class="btn btn-danger" id="classes--delete--${classInfo.firebaseKey}">Delete</button>
+  </td>` : ''}
 </tr>
 `;
 

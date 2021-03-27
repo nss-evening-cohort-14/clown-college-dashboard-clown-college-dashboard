@@ -3,7 +3,12 @@ import { getAllLessons } from '../../helpers/lessonHelper';
 const lessonCard = (lessonInfo, userInfo) => `
 <tr>
   <td>${lessonInfo.name}</td>
-  ${userInfo ? `<td><button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="lessons--edit--${lessonInfo.firebaseKey}">Edit</button></td>` : ''}
+  ${userInfo ? `
+  <td>
+    <button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="lessons--edit--${lessonInfo.firebaseKey}">Edit</button>
+    <button class="btn btn-danger" id="lessons--delete--${lessonInfo.firebaseKey}">Delete</button>
+  </td>
+  ` : ''}
 </tr>
 `;
 

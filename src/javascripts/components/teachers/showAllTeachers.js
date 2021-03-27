@@ -6,7 +6,11 @@ const userCard = (teacherInfo, userInfo) => `
     <div style="background-image: url(${teacherInfo.imageUrl}); height: 100px; width: 100px;"></div>
   </td>
   <td>${teacherInfo.fullName}</td>
-  ${userInfo ? `<td><button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="teachers--edit--${teacherInfo.firebaseKey}">Edit</button></td>` : ''}
+  ${userInfo ? `
+  <td>
+    <button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="teachers--edit--${teacherInfo.firebaseKey}">Edit</button>
+  </td>
+  ` : ''}
 </tr>
 `;
 
