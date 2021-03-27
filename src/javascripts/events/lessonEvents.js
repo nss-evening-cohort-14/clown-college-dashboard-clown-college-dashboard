@@ -19,13 +19,16 @@ const handleUpdateLesson = (firebaseKey) => {
   $('#formModal').modal('toggle');
 };
 
-// const handleDeleteLesson = (firebaseKey) => {
-//   deleteLesson(firebaseKey).then(showAllLessons);
-// };
+const handleDeleteLesson = (firebaseKey) => {
+  deleteLesson(firebaseKey).then(showAllLessons);
+};
 
 const lessonEvents = (eventId) => {
   const [, action, firebaseKey] = eventId.split('--');
   switch (action) {
+    case 'delete':
+      handleDeleteLesson(firebaseKey);
+      break;
     case 'add':
       showAddLessonForm();
       break;

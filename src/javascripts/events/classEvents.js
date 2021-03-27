@@ -11,13 +11,16 @@ const handleUpdateClass = (firebaseKey) => {
   $('#formModal').modal('toggle');
 };
 
-// const handleDeleteClass = (firebaseKey) => {
-//   deleteClass(firebaseKey).then(showAllClasses);
-// };
+const handleDeleteClass = (firebaseKey) => {
+  deleteClass(firebaseKey).then(showAllClasses);
+};
 
 const classEvents = (eventId) => {
   const [, action, firebaseKey] = eventId.split('--');
   switch (action) {
+    case 'delete':
+      handleDeleteClass(firebaseKey);
+      break;
     case 'add':
       showAddClassesForm();
       break;

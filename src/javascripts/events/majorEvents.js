@@ -19,13 +19,16 @@ const handleUpdateMajor = (firebaseKey) => {
   $('#formModal').modal('toggle');
 };
 
-// const handleDeleteMajor = (firebaseKey) => {
-//   deleteMajor(firebaseKey).then(showAllMajors);
-// };
+const handleDeleteMajor = (firebaseKey) => {
+  deleteMajor(firebaseKey).then(showAllMajors);
+};
 
 const majorEvents = (eventId) => {
   const [, action, firebaseKey] = eventId.split('--');
   switch (action) {
+    case 'delete':
+      handleDeleteMajor(firebaseKey);
+      break;
     case 'add':
       showAddMajorForm();
       break;

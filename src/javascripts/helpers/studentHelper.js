@@ -22,7 +22,7 @@ const createStudent = (studentInfo) => new Promise((resolve, reject) => {
 
 const deleteStudent = (firebaseKey) => new Promise((resolve, reject) => {
   axios
-    .gedeletet(`${BASEURL}/students/${firebaseKey}.json`)
+    .delete(`${BASEURL}/students/${firebaseKey}.json`)
     .then(resolve)
     .catch(reject);
 });

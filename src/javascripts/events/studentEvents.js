@@ -11,13 +11,16 @@ const handleCreateStudent = () => {
   $('#formModal').modal('toggle');
 };
 
-// const handleDeleteStudent = (firebaseKey) => {
-//   deleteStudent(firebaseKey).then(showAllStudents);
-// };
+const handleDeleteStudent = (firebaseKey) => {
+  deleteStudent(firebaseKey).then(showAllStudents);
+};
 
 const studentEvents = (eventId) => {
-  const action = eventId.split('--')[1];
+  const [, action, firebaseKey] = eventId.split('--');
   switch (action) {
+    case 'delete':
+      handleDeleteStudent(firebaseKey);
+      break;
     case 'add':
       showAddStudentForm();
       break;
