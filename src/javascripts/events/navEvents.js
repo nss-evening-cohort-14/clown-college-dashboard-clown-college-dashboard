@@ -1,5 +1,6 @@
 import signIn from '../helpers/signIn';
 import signOut from '../helpers/signOut';
+import homeView from '../views/homeView';
 import studentView from '../views/studentView';
 import teacherView from '../views/teacherView';
 import lessonView from '../views/lessonView';
@@ -16,7 +17,7 @@ const navEvents = (eventId, userInfo) => {
       signIn();
       break;
     case 'home':
-      studentView(userInfo);
+      homeView();
       break;
     case 'students':
       studentView(userInfo);

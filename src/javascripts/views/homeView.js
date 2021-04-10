@@ -1,4 +1,4 @@
-const home = () => {
+const homeView = () => {
   document.querySelector('#app-body').innerHTML = `
   <div class="container d-flex justify-content-center flex-column" id="home-page">
     <div class="jumbotron" style="background-color: white"> 
@@ -7,4 +7,4 @@ const home = () => {
   </div>`;
 };
 
-export default home;
+export default homeView;
