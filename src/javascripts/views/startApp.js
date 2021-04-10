@@ -1,11 +1,11 @@
 import domBuilder from '../components/domBuilder';
 import { addDomEvents } from '../events/domEvents';
-import studentView from './studentView';
+import home from './homePage';
 
 const startApp = (userInfo) => {
   domBuilder(userInfo);
   addDomEvents(userInfo);
-  studentView(userInfo);
+  home();
 };
 
 export default startApp;
