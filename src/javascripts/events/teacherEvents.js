@@ -1,7 +1,12 @@
 import showAddTeacherForm from '../components/teachers/showAddTeacherForm';
 import showAllTeachers from '../components/teachers/showAllTeachers';
 import showEditTeacherForm from '../components/teachers/showEditTeacherForm';
-import { createTeacher, updateTeacher } from '../helpers/teacherHelper';
+import {
+  createTeacher,
+  deleteTeacher,
+  getSingleTeacher,
+  updateTeacher
+} from '../helpers/teacherHelper';
 
 const handleCreateTeacher = () => {
   const newTeacherInfo = {
@@ -21,9 +26,20 @@ const handleUpdateTeacher = (firebaseKey) => {
   $('#formModal').modal('toggle');
 };
 
+const handleDeleteTeacher = (firebaseKey) => {
+  getSingleTeacher(firebaseKey).then((teacherInfo) => {
+    // eslint-disable-next-line no-alert
+    const isTeacherConfirmed = window.confirm(`Do you want to delete the "${teacherInfo.name}" teacher?`);
+    if (isTeacherConfirmed) deleteTeacher(firebaseKey).then(showAllTeachers);
+  });
+};
+
 const teacherEvents = (eventId) => {
   const [, action, firebaseKey] = eventId.split('--');
   switch (action) {
+    case 'delete':
+      handleDeleteTeacher(firebaseKey);
+      break;
     case 'add':
       showAddTeacherForm();
       break;
