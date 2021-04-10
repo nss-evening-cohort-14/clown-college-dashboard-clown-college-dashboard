@@ -17,7 +17,7 @@ const navEvents = (eventId, userInfo) => {
       signIn();
       break;
     case 'home':
-      homeView();
+      homeView(userInfo);
       break;
     case 'students':
       studentView(userInfo);
