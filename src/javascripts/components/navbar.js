@@ -1,13 +1,18 @@
+import universityLogo from '../../styles/assets/universityLogo.jpeg';
+
 const navbar = (userInfo) => {
   const navbarHTML = `
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" id="navbar--home" href="#">Navbar</a>
+  <a class="navbar-brand" id="navbar--home" href="#"><img src="${universityLogo}" style="width: 3em; margin-left: 1em"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#" id="navbar--home">Home</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="#" id="navbar--students">Students</a>
       </li>
