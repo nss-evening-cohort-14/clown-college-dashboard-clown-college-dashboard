@@ -1,3 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
+body {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+#app-body {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
