@@ -1,6 +1,6 @@
 const homeView = () => {
   document.querySelector('#app-body').innerHTML = `
-      <div class="container d-flex justify-content-center" style="margin-top: 5em; margin-left: 20em">
+      <div class="container d-flex justify-content-center" style="margin-top: 5em; margin-left: 12em">
         <div class="container home-info-container" style="width: 50em">
           <h1>Studying carnivaling from a new angle.</h1>
           <p style="margin-top: 1.3em">Any successful career starts with good education. Together with us you will have deeper knowledge of the subjects that will be especially useful for you when climbing the career ladder.</p>
