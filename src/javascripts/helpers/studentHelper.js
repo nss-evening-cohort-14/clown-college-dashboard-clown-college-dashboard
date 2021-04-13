@@ -26,10 +26,16 @@ const createStudent = (studentInfo) => new Promise((resolve, reject) => {
     })
     .catch(reject);
 });
-
 const deleteStudent = (firebaseKey) => new Promise((resolve, reject) => {
   axios
     .delete(`${BASEURL}/students/${firebaseKey}.json`)
+    .then(resolve)
+    .catch(reject);
+});
+
+const updateStudent = (firebaseKey, studentInfo) => new Promise((resolve, reject) => {
+  axios
+    .patch(`${BASEURL}/students/${firebaseKey}.json`, studentInfo)
     .then(resolve)
     .catch(reject);
 });
@@ -38,5 +44,6 @@ export {
   getAllStudents,
   createStudent,
   deleteStudent,
-  getSingleStudent
+  getSingleStudent,
+  updateStudent
 };

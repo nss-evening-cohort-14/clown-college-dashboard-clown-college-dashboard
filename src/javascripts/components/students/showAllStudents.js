@@ -8,7 +8,10 @@ const userCard = (studentInfo, userInfo) => `
   <td>${studentInfo.fullName}</td>
   ${userInfo ? `
   <td>
-    <button class="btn btn-danger" id="students--delete--${studentInfo.firebaseKey}">Delete</button>
+    <button class="btn btn-danger" data-toggle="modal"
+    data-target="#formModal" id="students--edit--${studentInfo.firebaseKey}">Edit</button>
+  </button>
+  <button class="btn btn-danger" id="students--delete--${studentInfo.firebaseKey}">Delete</button>
   </td>
   ` : ''}
 </tr>
@@ -23,6 +26,7 @@ const showAllStudents = (userInfo) => {
           <tr>
             <th scope="col">Image</th>
             <th scope="col">Full Name</th>
+            ${userInfo ? '<th scope="col">Actions</th>' : ''}
           </tr>
         </thead>
         <tbody>
