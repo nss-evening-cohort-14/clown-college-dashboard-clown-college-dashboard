@@ -10,8 +10,8 @@ import {
 
 const handleCreateTeacher = () => {
   const newTeacherInfo = {
-    fullName: document.querySelector('#fullName').value,
-    imageUrl: document.querySelector('#imageUrl').value,
+    teacher_name: document.querySelector('#fullName').value,
+    teacher_image: document.querySelector('#imageUrl').value,
   };
   createTeacher(newTeacherInfo).then(showAllTeachers);
   $('#formModal').modal('toggle');
@@ -19,8 +19,8 @@ const handleCreateTeacher = () => {
 
 const handleUpdateTeacher = (firebaseKey) => {
   const newTeacherInfo = {
-    fullName: document.querySelector('#fullName').value,
-    imageUrl: document.querySelector('#imageUrl').value,
+    teacher_name: document.querySelector('#fullName').value,
+    teacher_image: document.querySelector('#imageUrl').value,
   };
   updateTeacher(firebaseKey, newTeacherInfo).then(showAllTeachers);
   $('#formModal').modal('toggle');
@@ -29,7 +29,7 @@ const handleUpdateTeacher = (firebaseKey) => {
 const handleDeleteTeacher = (firebaseKey) => {
   getSingleTeacher(firebaseKey).then((teacherInfo) => {
     // eslint-disable-next-line no-alert
-    const isTeacherConfirmed = window.confirm(`Do you want to delete the "${teacherInfo.name}" teacher?`);
+    const isTeacherConfirmed = window.confirm(`Do you want to delete the "${teacherInfo.teacher_name}" teacher?`);
     if (isTeacherConfirmed) deleteTeacher(firebaseKey).then(showAllTeachers);
   });
 };

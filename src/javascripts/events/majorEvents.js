@@ -10,7 +10,7 @@ import {
 
 const handleCreateMajor = () => {
   const majorInfo = {
-    name: document.querySelector('#name').value,
+    major_name: document.querySelector('#name').value,
   };
   createMajor(majorInfo).then(showAllMajors);
   $('#formModal').modal('toggle');
@@ -18,7 +18,7 @@ const handleCreateMajor = () => {
 
 const handleUpdateMajor = (firebaseKey) => {
   const majorInfo = {
-    name: document.querySelector('#name').value,
+    major_name: document.querySelector('#name').value,
   };
   updateMajor(firebaseKey, majorInfo).then(showAllMajors);
   $('#formModal').modal('toggle');
@@ -27,7 +27,7 @@ const handleUpdateMajor = (firebaseKey) => {
 const handleDeleteMajor = (firebaseKey) => {
   getSingleMajor(firebaseKey).then((majorInfo) => {
     // eslint-disable-next-line no-alert
-    const isConfirmed = window.confirm(`Do you want to delete the "${majorInfo.name}" Major?`);
+    const isConfirmed = window.confirm(`Do you want to delete the "${majorInfo.major_name}" Major?`);
     if (isConfirmed) deleteMajor(firebaseKey).then(showAllMajors);
   });
 };

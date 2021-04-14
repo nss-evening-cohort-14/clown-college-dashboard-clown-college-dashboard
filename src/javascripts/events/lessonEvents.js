@@ -10,7 +10,7 @@ import {
 
 const handleCreateLesson = () => {
   const lessonInfo = {
-    name: document.querySelector('#name').value,
+    lesson_name: document.querySelector('#name').value,
   };
   createLesson(lessonInfo).then(showAllLessons);
   $('#formModal').modal('toggle');
@@ -18,7 +18,7 @@ const handleCreateLesson = () => {
 
 const handleUpdateLesson = (firebaseKey) => {
   const lessonInfo = {
-    name: document.querySelector('#name').value,
+    lesson_name: document.querySelector('#name').value,
   };
   updateLesson(firebaseKey, lessonInfo).then(showAllLessons);
   $('#formModal').modal('toggle');
@@ -27,7 +27,7 @@ const handleUpdateLesson = (firebaseKey) => {
 const handleDeleteLesson = (firebaseKey) => {
   getSingleLesson(firebaseKey).then((lessonInfo) => {
     // eslint-disable-next-line no-alert
-    const isConfirmed = window.confirm(`Do you want to delete the "${lessonInfo.name}" class?`);
+    const isConfirmed = window.confirm(`Do you want to delete the "${lessonInfo.lesson_name}" class?`);
     if (isConfirmed) deleteLesson(firebaseKey).then(showAllLessons);
   });
 };

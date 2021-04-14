@@ -2,7 +2,7 @@ import { getAllClasses } from '../../helpers/classHelper';
 
 const classCard = (classInfo, userInfo) => `
 <tr>
-  <td>${classInfo.name}</td>
+  <td>${classInfo.class_name}</td>
   ${userInfo ? `
   <td>
     <button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="classes--edit--${classInfo.firebaseKey}">Edit</button>

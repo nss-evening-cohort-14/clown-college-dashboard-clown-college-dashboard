@@ -3,9 +3,9 @@ import { getAllStudents } from '../../helpers/studentHelper';
 const userCard = (studentInfo, userInfo) => `
 <tr>
   <td>
-    <div style="background-image: url(${studentInfo.imageUrl}); height: 100px; width: 100px;"></div>
+    <div style="background-image: url(${studentInfo.student_image}); height: 100px; width: 100px;"></div>
   </td>
-  <td>${studentInfo.fullName}</td>
+  <td>${studentInfo.student_name}</td>
   ${userInfo ? `
   <td>
     <button class="btn btn-danger" data-toggle="modal"

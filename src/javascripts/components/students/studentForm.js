@@ -2,7 +2,7 @@ const studentForm = (studentInfo) => `
 <form class="mb-4">
   <div class="form-group">
     <label for="title">Full Name</label>
-    <input type="text" class="form-control" id="fullName" aria-describedby="fullName" ${studentInfo ? `value="${studentInfo.fullName}"` : ''} placeholder="Enter Teacher's Full Name">
+    <input type="text" class="form-control" id="fullName" aria-describedby="fullName" ${studentInfo ? `value="${studentInfo.student_name}"` : ''} placeholder="Enter Student's Full Name">
   </div>
   <div class="form-group">
     <label for="image">Image URL</label>

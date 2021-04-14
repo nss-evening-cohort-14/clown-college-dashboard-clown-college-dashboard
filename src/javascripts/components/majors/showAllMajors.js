@@ -2,7 +2,7 @@ import { getAllMajors } from '../../helpers/majorHelper';
 
 const majorsCard = (majorsInfo, userInfo) => `
 <tr>
-  <td>${majorsInfo.name}</td>
+  <td>${majorsInfo.major_name}</td>
   ${userInfo ? `
   <td>
     <button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="majors--edit--${majorsInfo.firebaseKey}">Edit</button>

@@ -1,11 +1,21 @@
 import showAddClassesForm from '../components/classes/showAddClassesForm';
 import showAllClasses from '../components/classes/showAllClasses';
 import showEditClassForm from '../components/classes/showEditClassForm';
-import { deleteClass, getSingleClass, updateClass } from '../helpers/classHelper';
+import {
+  deleteClass, getSingleClass, updateClass, createClass
+} from '../helpers/classHelper';
+
+const handleCreateClass = () => {
+  const classInfo = {
+    class_name: document.querySelector('#name').value,
+  };
+  createClass(classInfo).then(showAllClasses);
+  $('#formModal').modal('toggle');
+};
 
 const handleUpdateClass = (firebaseKey) => {
   const classInfo = {
-    name: document.querySelector('#name').value,
+    class_name: document.querySelector('#name').value,
   };
   updateClass(firebaseKey, classInfo).then(showAllClasses);
   $('#formModal').modal('toggle');
@@ -14,7 +24,7 @@ const handleUpdateClass = (firebaseKey) => {
 const handleDeleteClass = (firebaseKey) => {
   getSingleClass(firebaseKey).then((classInfo) => {
     // eslint-disable-next-line no-alert
-    const isConfirmed = window.confirm(`Do you want to delete the "${classInfo.name}" class?`);
+    const isConfirmed = window.confirm(`Do you want to delete the "${classInfo.class_name}" class?`);
     if (isConfirmed) deleteClass(firebaseKey).then(showAllClasses);
   });
 };
@@ -27,6 +37,9 @@ const classEvents = (eventId) => {
       break;
     case 'add':
       showAddClassesForm();
+      break;
+    case 'add-submit':
+      handleCreateClass();
       break;
     case 'edit':
       showEditClassForm(firebaseKey);
