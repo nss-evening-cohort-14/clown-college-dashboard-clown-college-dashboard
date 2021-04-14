@@ -1,12 +1,12 @@
 import showAddMajorForm from '../components/majors/showAddMajorForm';
 import showAllMajors from '../components/majors/showAllMajors';
+import showEditMajorForm from '../components/majors/showEditMajorForm';
 import {
   createMajor,
   deleteMajor,
   getSingleMajor,
   updateMajor
 } from '../helpers/majorHelper';
-import showEditMajorForm from '../components/majors/showEditMajorForm';
 
 const handleCreateMajor = () => {
   const majorInfo = {

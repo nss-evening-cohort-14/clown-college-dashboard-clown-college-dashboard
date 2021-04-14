@@ -2,7 +2,7 @@ import formModal from '../formModal';
 import majorForm from './majorForm';
 
 const showAddMajorForm = () => {
-  formModal('Add Lesson');
+  formModal('Add Major');
   document.querySelector('#modal-body').innerHTML = majorForm();
 };
 
