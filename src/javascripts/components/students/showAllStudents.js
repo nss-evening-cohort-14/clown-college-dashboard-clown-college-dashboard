@@ -3,7 +3,7 @@ import { getAllStudents } from '../../helpers/studentHelper';
 const userCard = (studentInfo, userInfo) => `
 <tr>
   <td>
-    <div style="background-image: url(${studentInfo.student_image}); height: 100px; width: 100px;"></div>
+    <img class="person-img" src="${studentInfo.student_image}"></img>
   </td>
   <td>${studentInfo.student_name}</td>
   ${userInfo ? `

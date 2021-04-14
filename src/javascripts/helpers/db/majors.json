@@ -1,72 +1,27 @@
 {
-  "-MXiwSJbxW40r_uJz1p1" : {
-    "firebaseKey": "-MXiwSJbxW40r_uJz1p1", 
-    "uid":"JuppZJLbLrWlA0YbSTinzuHypEP2",
-    "name":"Cephalophysis (Hertel) Kilias",
-    "classId":"-MV83qsrF042srop08Uy",
-    "lessonId":"-MV83qscBCz9Nnx5iVhs"
+  "-MYCAzGrgUkILNRw-rV_" : {
+    "class_id" : "-MYBrAjo2wcSr7dErOwp",
+    "firebaseKey" : "-MYCAzGrgUkILNRw-rV_",
+    "major_id" : "-MYC0JSI03CakslyTvKz"
   },
-  "-MXiwSJeflbRKutqjPyf" : {
-    "firebaseKey": "-MXiwSJeflbRKutqjPyf",
-    "uid":"JuppZJLbLrWlA0YbSTinzuHypEP2",
-    "name":"Crataegus indicens Ashe",
-    "classId":"-MV83qsn-duoE3X5cRKo",
-    "lessonId":"-MV83qscBCz9Nnx5iVhs"
+  "-MYCBAgiGkgXNw_V243U" : {
+    "class_id" : "-MYBrzJyoIpenCtR_5i-",
+    "firebaseKey" : "-MYCBAgiGkgXNw_V243U",
+    "major_id" : "-MYC08lL57tt2efcQpnY"
   },
-  "-MXiwSJhhfM_KE6ehYca" : {
-    "firebaseKey": "-MXiwSJhhfM_KE6ehYca",
-    "uid":"JuppZJLbLrWlA0YbSTinzuHypEP2",
-    "name":"Erigeron peregrinus (Banks ex Pursh) Greene ssp. peregrinus var. dawsonii Greene",
-    "classId":"-MV83qsdUHOEtu_e8W5J",
-    "lessonId":"-MV83qsgI2IaVyn7tyaG"
+  "-MYCBJqzAzoPhF6cyi3V" : {
+    "class_id" : "-MYBsNWKl6VBWNXG8lNn",
+    "firebaseKey" : "-MYCBJqzAzoPhF6cyi3V",
+    "major_id" : "-MYC08lL57tt2efcQpnY"
   },
-  "-MXiwSJjjQSw6KkgM6T5" : {
-    "firebaseKey": "-MXiwSJjjQSw6KkgM6T5",
-    "uid":"JuppZJLbLrWlA0YbSTinzuHypEP2",
-    "name":"Juncus mexicanus Willd. ex Schult. & Schult. f.",
-    "classId":"-MV83qsgI2IaVyn7tyaG",
-    "lessonId":"-MV83qskdNonKubrvWRC"
+  "-MYCBTGIQabiaSWdCk36" : {
+    "class_id" : "-MYBxef8_OL_PrcK6jcy",
+    "firebaseKey" : "-MYCBTGIQabiaSWdCk36",
+    "major_id" : "-MYC-wufbP5IOqnPaacu"
   },
-  "-MXiwSJmT2ev17Yebemu" : {
-    "firebaseKey": "-MXiwSJmT2ev17Yebemu",
-    "uid":"JuppZJLbLrWlA0YbSTinzuHypEP2",
-    "name":"Salix alaxensis (Andersson) Coville var. longistylis (Rydb.) C.K. Schneid.",
-    "classId":"-MV83qskdNonKubrvWRC",
-    "lessonId":"-MV83qsdUHOEtu_e8W5J"
-  },
-  "-MXiwSJo_03HzRM4vgtj" : {
-    "firebaseKey": "-MXiwSJo_03HzRM4vgtj",
-    "uid":"JuppZJLbLrWlA0YbSTinzuHypEP2",
-    "name":"Ligusticum calderi Mathias & Constance",
-    "classId":"-MV83qsrF042srop08Uy",
-    "lessonId":"-MV83qslyWnHXzzGvedF"
-  },
-  "-MXiwSJqiw3W9jKsuVHq" : {
-    "firebaseKey": "-MXiwSJqiw3W9jKsuVHq",
-    "uid":"JuppZJLbLrWlA0YbSTinzuHypEP2",
-    "name":"Ipomoea pubescens Lam.",
-    "classId":"-MV83qsrF042srop08Uy",
-    "lessonId":"-MV83qsp7t3LHEzxG0nB"
-  },
-  "-MXiwSJswZapFWNL-9Fl" : {
-    "firebaseKey": "-MXiwSJswZapFWNL-9Fl",
-    "uid":"JuppZJLbLrWlA0YbSTinzuHypEP2",
-    "name":"Diplacus aridus Abrams",
-    "classId":"-MV83qsdUHOEtu_e8W5J",
-    "lessonId":"-MV83qsgI2IaVyn7tyaG"
-  },
-  "-MXiwSJuetsqs4c1-ASX" : {
-    "firebaseKey": "-MXiwSJuetsqs4c1-ASX",
-    "uid":"JuppZJLbLrWlA0YbSTinzuHypEP2",
-    "name":"Carex supina Willd. ex Wahlenb. var. spaniocarpa (Steud.) B. Boivin",
-    "classId":"-MV83qscBCz9Nnx5iVhs",
-    "lessonId":"-MV83qskdNonKubrvWRC"
-  },
-  "-MXiwSJwHRYglW28Ei1_" : {
-    "firebaseKey": "-MXiwSJwHRYglW28Ei1_",
-    "uid":"JuppZJLbLrWlA0YbSTinzuHypEP2",
-    "name":"Leymus innovatus (Beal) Pilg.",
-    "classId":"-MV83qsgI2IaVyn7tyaG",
-    "lessonId":"-MV83qsp7t3LHEzxG0nB"
+  "-MYCBdMuthnLlpPuAfCK" : {
+    "class_id" : "-MYBxyWbiggz2SKPB3J4",
+    "firebaseKey" : "-MYCBdMuthnLlpPuAfCK",
+    "major_id" : "-MYC-kwm0xSIxcPnVnXe"
   }
 }
