@@ -9,6 +9,15 @@ const getAllClasses = () => new Promise((resolve, reject) => {
     .then((resp) => resolve(Object.values(resp.data).reverse()))
     .catch(reject);
 });
+const createClass = (classInfo) => new Promise((resolve, reject) => {
+  axios
+    .post(`${BASEURL}/classes.json`, classInfo)
+    .then((resp) => {
+      const firebaseKey = resp.data.class_name;
+      axios.patch(`${BASEURL}/classes/${firebaseKey}.json`, { firebaseKey }).then(resolve);
+    })
+    .catch(reject);
+});
 
 const getSingleClass = (firebaseKey) => new Promise((resolve, reject) => {
   axios
@@ -35,5 +44,6 @@ export {
   getAllClasses,
   getSingleClass,
   updateClass,
-  deleteClass
+  deleteClass,
+  createClass
 };

@@ -1,7 +1,17 @@
 import showAddClassesForm from '../components/classes/showAddClassesForm';
 import showAllClasses from '../components/classes/showAllClasses';
 import showEditClassForm from '../components/classes/showEditClassForm';
-import { deleteClass, getSingleClass, updateClass } from '../helpers/classHelper';
+import {
+  deleteClass, getSingleClass, updateClass, createClass
+} from '../helpers/classHelper';
+
+const handleCreateClass = () => {
+  const classInfo = {
+    class_name: document.querySelector('#name').value,
+  };
+  createClass(classInfo).then(showAllClasses);
+  $('#formModal').modal('toggle');
+};
 
 const handleUpdateClass = (firebaseKey) => {
   const classInfo = {
@@ -27,6 +37,9 @@ const classEvents = (eventId) => {
       break;
     case 'add':
       showAddClassesForm();
+      break;
+    case 'add-submit':
+      handleCreateClass();
       break;
     case 'edit':
       showEditClassForm(firebaseKey);
