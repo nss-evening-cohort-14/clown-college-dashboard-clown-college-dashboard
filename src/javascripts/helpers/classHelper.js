@@ -13,7 +13,7 @@ const createClass = (classInfo) => new Promise((resolve, reject) => {
   axios
     .post(`${BASEURL}/classes.json`, classInfo)
     .then((resp) => {
-      const firebaseKey = resp.data.class_name;
+      const firebaseKey = resp.data.name;
       axios.patch(`${BASEURL}/classes/${firebaseKey}.json`, { firebaseKey }).then(resolve);
     })
     .catch(reject);
