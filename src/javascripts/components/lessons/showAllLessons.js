@@ -2,7 +2,7 @@ import { getAllLessons } from '../../helpers/lessonHelper';
 
 const lessonCard = (lessonInfo, userInfo) => `
 <tr>
-  <td>${lessonInfo.name}</td>
+  <td>${lessonInfo.lesson_name}</td>
   ${userInfo ? `
   <td>
     <button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="lessons--edit--${lessonInfo.firebaseKey}">Edit</button>
