@@ -3,9 +3,9 @@ import { getAllTeachers } from '../../helpers/teacherHelper';
 const userCard = (teacherInfo, userInfo) => `
 <tr>
   <td>
-    <div style="background-image: url(${teacherInfo.imageUrl}); height: 100px; width: 100px;"></div>
+    <div style="background-image: url(${teacherInfo.teacher_image}); height: 100px; width: 100px;"></div>
   </td>
-  <td>${teacherInfo.fullName}</td>
+  <td>${teacherInfo.teacher_name}</td>
   ${userInfo ? `
   <td>
     <button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="teachers--edit--${teacherInfo.firebaseKey}">Edit</button>
