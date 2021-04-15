@@ -62,11 +62,9 @@ The art of comedy is not lost, especially not here at <funny name>. Due to decli
 - view the grades of the students when viewing the Class
 ## Relevant Links
 
-- [Check out the deployed site] (https://e14-clown-college.netlify.app/)
+CHECKOUT THE DEPLOYED SITE! (https://e14-clown-college.netlify.app/)
 
 LOOM VIDEO: https://www.loom.com/share/cbf80856bdd14ecd9736703c70ab35bd
-
-
 
 LUCIDCHART WIREFRAME & ERD:
 https://lucid.app/lucidchart/66395ef9-9b5c-4b36-9bc7-bf094a80db06/edit?page=0_0#
@@ -76,7 +74,7 @@ https://www.figma.com/file/MJSR9cLCT8XTJ2wioCJ54M/Clown-College-Group-Project?no
 
 PROJECT BOARD: (https://github.com/nss-evening-cohort-14/clown-college-dashboard-clown-college-dashboard/projects/1)
 
-<iframe width="560" height="315" src='https://dbdiagram.io/embed/605a8522ecb54e10c33cef28'> </iframe>
+ERD: https://dbdiagram.io/embed/605a8522ecb54e10c33cef28
 
 ## Project Screenshots
 
