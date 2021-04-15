@@ -5,7 +5,7 @@ const lessonCard = (lessonInfo, userInfo) => `
   <td>${lessonInfo.lesson_name}</td>
   ${userInfo ? `
   <td>
-    <button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="lessons--edit--${lessonInfo.firebaseKey}">Edit</button>
+    <button class="btn btn-secondary" data-toggle="modal" data-target="#formModal" id="lessons--edit--${lessonInfo.firebaseKey}">Edit</button>
     <button class="btn btn-danger" id="lessons--delete--${lessonInfo.firebaseKey}">Delete</button>
   </td>
   ` : ''}

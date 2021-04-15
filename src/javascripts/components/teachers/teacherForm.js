@@ -8,7 +8,7 @@ const teacherForm = (teacherInfo) => `
     <label for="image">Image URL</label>
     <input type="url" class="form-control" id="imageUrl" ${teacherInfo ? `value="${teacherInfo.teacher_image}"` : ''} placeholder="Image URL">
   </div>
-  <button id="${teacherInfo ? `teachers--edit-submit--${teacherInfo.firebaseKey}` : 'teachers--add-submit'}" class="btn btn-success">${teacherInfo ? 'Edit' : 'Add'} Teacher</button>
+  <button id="${teacherInfo ? `teachers--edit-submit--${teacherInfo.firebaseKey}` : 'teachers--add-submit'}" class="btn btn-secondary">${teacherInfo ? 'Edit' : 'Add'} Teacher</button>
 </form>
 `;
 

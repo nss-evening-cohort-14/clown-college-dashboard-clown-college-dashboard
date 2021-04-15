@@ -4,7 +4,7 @@ const majorForm = (majorInfo) => `
     <label for="title">Name</label>
     <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter Major Name" ${majorInfo ? `value="${majorInfo.major_name}"` : ''}>
   </div>
-  <button id="${majorInfo ? `majors--edit-submit--${majorInfo.firebaseKey}` : 'majors--add-submit'}" class="btn btn-success">${majorInfo ? 'Edit' : 'Add'} Major</button>
+  <button id="${majorInfo ? `majors--edit-submit--${majorInfo.firebaseKey}` : 'majors--add-submit'}" class="btn btn-secondary">${majorInfo ? 'Edit' : 'Add'} Major</button>
 </form>
 `;
 
