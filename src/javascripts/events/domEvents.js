@@ -13,6 +13,7 @@ const handleDomEvents = (e, userInfo) => {
   if (e.target.id.startsWith('lessons--')) lessonEvents(e.target.id);
   if (e.target.id.startsWith('classes--')) classEvents(e.target.id);
   if (e.target.id.startsWith('majors--')) majorEvents(e.target.id);
+  if (e.target.id.startsWith('lesson--assign')) lessonEvents(e.target.id);
 };
 
 const addDomEvents = (userInfo) => document.querySelector('body').addEventListener('click', (e) => handleDomEvents(e, userInfo));

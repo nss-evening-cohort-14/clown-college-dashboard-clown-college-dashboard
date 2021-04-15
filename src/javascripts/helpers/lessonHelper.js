@@ -41,10 +41,23 @@ const updateLesson = (firebaseKey, lessonInfo) => new Promise((resolve, reject) 
     .catch(reject);
 });
 
+const assignToClassForm = (classLessonObject) => new Promise((resolve, reject) => {
+  axios
+    .post(`${BASEURL}/class_lesson.json`, classLessonObject)
+    .then((response) => {
+      const body = { firebaseKey: response.data.name };
+      axios
+        .patch(`${BASEURL}/class_lesson/${response.data.name}.json`, body)
+        .then((patch) => resolve(patch))
+        .catch((error) => reject(error));
+    });
+});
+
 export {
   getAllLessons,
   createLesson,
   getSingleLesson,
   updateLesson,
-  deleteLesson
+  deleteLesson,
+  assignToClassForm
 };
