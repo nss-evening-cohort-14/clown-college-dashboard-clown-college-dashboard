@@ -64,19 +64,17 @@ The art of comedy is not lost, especially not here at <funny name>. Due to decli
 
 - [Check out the deployed site] (https://e14-clown-college.netlify.app/)
 
-LOOM VIDEO:
+LOOM VIDEO: https://www.loom.com/share/cbf80856bdd14ecd9736703c70ab35bd
 
 
-ERD:
 
-
-LUCIDCHART:
+LUCIDCHART WIREFRAME & ERD:
 https://lucid.app/lucidchart/66395ef9-9b5c-4b36-9bc7-bf094a80db06/edit?page=0_0#
 
-FIGMA:
+FIGMA WIREFRAME & ERD:
 https://www.figma.com/file/MJSR9cLCT8XTJ2wioCJ54M/Clown-College-Group-Project?node-id=124%3A1
 
-- [Project Board](https://github.com/nss-evening-cohort-14/clown-college-dashboard-clown-college-dashboard/projects/1)
+PROJECT BOARD: (https://github.com/nss-evening-cohort-14/clown-college-dashboard-clown-college-dashboard/projects/1)
 
 <iframe width="560" height="315" src='https://dbdiagram.io/embed/605a8522ecb54e10c33cef28'> </iframe>
 
