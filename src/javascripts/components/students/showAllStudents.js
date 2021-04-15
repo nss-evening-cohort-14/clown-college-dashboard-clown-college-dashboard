@@ -8,7 +8,7 @@ const userCard = (studentInfo, userInfo) => `
   <td>${studentInfo.student_name}</td>
   ${userInfo ? `
   <td>
-    <button class="btn btn-danger" data-toggle="modal"
+    <button class="btn btn-secondary" data-toggle="modal"
     data-target="#formModal" id="students--edit--${studentInfo.firebaseKey}">Edit</button>
   </button>
   <button class="btn btn-danger" id="students--delete--${studentInfo.firebaseKey}">Delete</button>

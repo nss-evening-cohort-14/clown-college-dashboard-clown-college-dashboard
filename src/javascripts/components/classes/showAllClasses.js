@@ -5,7 +5,7 @@ const classCard = (classInfo, userInfo) => `
   <td>${classInfo.class_name}</td>
   ${userInfo ? `
   <td>
-    <button class="btn btn-success" data-toggle="modal" data-target="#formModal" id="classes--edit--${classInfo.firebaseKey}">Edit</button>
+    <button class="btn btn-secondary" data-toggle="modal" data-target="#formModal" id="classes--edit--${classInfo.firebaseKey}">Edit</button>
     <button class="btn btn-danger" id="classes--delete--${classInfo.firebaseKey}">Delete</button>
   </td>` : ''}
 </tr>
