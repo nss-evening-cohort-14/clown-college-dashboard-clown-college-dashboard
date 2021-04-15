@@ -74,7 +74,7 @@ https://www.figma.com/file/MJSR9cLCT8XTJ2wioCJ54M/Clown-College-Group-Project?no
 
 PROJECT BOARD: (https://github.com/nss-evening-cohort-14/clown-college-dashboard-clown-college-dashboard/projects/1)
 
-ERD: https://dbdiagram.io/embed/605a8522ecb54e10c33cef28
+DB DIAGRAM: https://dbdiagram.io/embed/605a8522ecb54e10c33cef28
 
 ## Project Screenshots
 
