@@ -62,7 +62,7 @@ The art of comedy is not lost, especially not here at <funny name>. Due to decli
 - view the grades of the students when viewing the Class
 ## Relevant Links
 
-- [Check out the deployed site](https://cranky-curran-ea8e6c.netlify.app/)
+- [Check out the deployed site] (https://e14-clown-college.netlify.app/)
 
 LOOM VIDEO:
 
