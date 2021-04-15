@@ -32,6 +32,14 @@ const handleDeleteLesson = (firebaseKey) => {
   });
 };
 
+const handleAssignLesson = () => {
+  const classLessonObject = {
+    lesson_name: document.querySelector('#name').value,
+  };
+  createLesson(classLessonObject).then(showAllLessons);
+  $('#formModal').modal('toggle');
+};
+
 const lessonEvents = (eventId) => {
   const [, action, firebaseKey] = eventId.split('--');
   switch (action) {
@@ -49,6 +57,9 @@ const lessonEvents = (eventId) => {
       break;
     case 'edit-submit':
       handleUpdateLesson(firebaseKey);
+      break;
+    case 'assign-lesson':
+      handleAssignLesson(firebaseKey);
       break;
     default:
       console.error(`The event ${action} is not accounted for`);
